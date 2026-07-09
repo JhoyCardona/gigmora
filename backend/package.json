@@ -13,12 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.110.0",
+    "@google/generative-ai": "^0.24.1",
     "@prisma/client": "^6.19.3",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^16.6.1",
     "express": "^4.22.2",
-    "jsonwebtoken": "^9.0.3"
+    "jsonwebtoken": "^9.0.3",
+    "openai": "^6.46.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",

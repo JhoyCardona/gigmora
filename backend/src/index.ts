@@ -7,6 +7,7 @@ import serviceRoutes from "./routes/service.routes";
 import orderRoutes from "./routes/order.routes";
 import messageRoutes from "./routes/message.routes";
 import reviewRoutes from "./routes/review.routes";
+import chatRoutes from "./routes/chat.routes";
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use("/api/services", serviceRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/orders/:orderId/messages", messageRoutes);
 app.use("/api/orders/:orderId/review", reviewRoutes);
+app.use("/api/chat", chatRoutes);
 
 const PORT = process.env.PORT || 4000;
 
