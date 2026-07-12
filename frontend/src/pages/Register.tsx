@@ -32,7 +32,7 @@ export default function Register() {
           placeholder="Nombre"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
           required
         />
         <input
@@ -40,7 +40,7 @@ export default function Register() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
           required
         />
         <input
@@ -48,18 +48,18 @@ export default function Register() {
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
           required
         />
         <label className="flex items-center gap-2 mb-4 text-sm text-slate-600">
           <input type="checkbox" checked={isProvider} onChange={(e) => setIsProvider(e.target.checked)} />
           Quiero ofrecer servicios (ser proveedor)
         </label>
-        <button className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition">
+        <button className="w-full bg-amber-600 text-white py-2 rounded-lg font-medium hover:bg-amber-700 transition">
           Crear cuenta
         </button>
         <p className="text-sm text-slate-500 mt-4 text-center">
-          ¿Ya tenés cuenta? <Link to="/login" className="text-indigo-600 font-medium">Iniciá sesión</Link>
+          ¿Ya tenés cuenta? <Link to="/login" className="text-amber-600 font-medium">Iniciá sesión</Link>
         </p>
       </form>
     </div>

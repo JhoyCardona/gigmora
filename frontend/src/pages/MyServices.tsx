@@ -56,7 +56,7 @@ export default function MyServices() {
         <h1 className="text-2xl font-bold text-slate-800">Mis servicios</h1>
         <button
           onClick={() => setShowForm(!showForm)}
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700"
+          className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-amber-700"
         >
           {showForm ? "Cancelar" : "+ Nuevo servicio"}
         </button>
@@ -110,7 +110,7 @@ export default function MyServices() {
               required
             />
           </div>
-          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700">
+          <button className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-amber-700">
             Publicar
           </button>
         </form>

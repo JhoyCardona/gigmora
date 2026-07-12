@@ -34,7 +34,23 @@ export async function listServices(req: Request, res: Response): Promise<void> {
       orderBy: { createdAt: "desc" },
     });
 
-    res.json(services);
+    const serviceIds = services.map((s) => s.id);
+
+    const reviews = await prisma.review.findMany({
+      where: { order: { serviceId: { in: serviceIds } } },
+      include: { order: { select: { serviceId: true } } },
+    });
+
+    const servicesWithRating = services.map((s) => {
+      const serviceReviews = reviews.filter((r) => r.order.serviceId === s.id);
+      const avgRating =
+        serviceReviews.length > 0
+          ? serviceReviews.reduce((sum, r) => sum + r.rating, 0) / serviceReviews.length
+          : null;
+      return { ...s, avgRating, reviewCount: serviceReviews.length };
+    });
+
+    res.json(servicesWithRating);
   } catch (error) {
     console.error("List services error:", error);
     res.status(500).json({ error: "Something went wrong fetching services" });

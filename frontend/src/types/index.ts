@@ -20,6 +20,8 @@ export interface Service {
   images: string[];
   category: Category;
   provider: { id: string; name: string };
+  avgRating: number | null;
+  reviewCount: number;
 }
 
 export interface Order {

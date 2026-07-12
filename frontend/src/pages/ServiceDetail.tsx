@@ -39,7 +39,7 @@ export default function ServiceDetail() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+      <span className="text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
         {service.category.name}
       </span>
       <h1 className="text-3xl font-bold text-slate-800 mt-4">{service.title}</h1>
@@ -54,7 +54,7 @@ export default function ServiceDetail() {
         <button
           onClick={handleOrder}
           disabled={ordering}
-          className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50"
+          className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 disabled:opacity-50"
         >
           {ordering ? "Procesando..." : "Contratar"}
         </button>
